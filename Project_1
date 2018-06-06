@@ -1,0 +1,23 @@
+package Problem_1;
+
+import java.util.Scanner;
+
+public class problem_1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int getnumber;
+		int sum = 0;
+		System.out.print("Please enter the number:");
+			getnumber = scan.nextInt();
+			
+			for(int i =0; i < getnumber; i++) {
+				if(i %3 ==0 || i %5 == 0) {
+					sum = sum + i;
+				}
+			}
+			System.out.println(sum);
+
+	}
+
+}
