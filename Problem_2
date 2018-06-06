@@ -1,0 +1,19 @@
+package Problem_2;
+
+public class problem_2 {
+	
+	public static void main(String[] args) {
+		int sum = 0;
+		int size = 4000001;
+		int[] fibonacci = new int[size];
+		
+		for(int i = 2; i < size; i++) {
+			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+			
+			if(fibonacci[i] %2 == 0) {
+				sum = sum + fibonacci[i];
+			}
+		}
+		System.out.println("Sum is: " + sum);
+	}
+}
