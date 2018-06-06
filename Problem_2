@@ -4,7 +4,7 @@ public class problem_2 {
 	
 	public static void main(String[] args) {
 		long sum = 0;
-		long size = 20;
+		long size = 4000000;
 		long[] fibonacci = new long[(int) size];
 		fibonacci[0] = 1;
 		fibonacci[1] = 1;
