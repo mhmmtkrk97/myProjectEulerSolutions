@@ -1,0 +1,29 @@
+package Problem_3;
+
+import java.util.Arrays;
+
+public class problem_3 {
+    public static void main(String[] args) {
+        long givenNumber = 600851475143L;
+        int n = ((int)Math.sqrt(givenNumber)) + 1;
+        boolean primeArray[] = new boolean[n+1];
+        Arrays.fill(primeArray, true);
+        primeArray[2] = true;
+        primeArray[3] = true;
+        for (int i = 4; i < n; i += 2) 
+        	primeArray[i] = false;
+        for (int i = 3; i < n; i += 2) {
+            for (int j = i+i; j < n; j += i) {
+                primeArray[j] = false;
+            }
+        }
+        long primeFactor = 0;
+        for (int i = 2; i < n; ++i) {
+            if (primeArray[i] && (givenNumber % i) == 0) {
+                primeFactor = Math.max(i, primeFactor);
+            }
+        }
+        
+        System.out.println(primeFactor);
+    }
+}
